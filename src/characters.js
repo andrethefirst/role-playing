@@ -77,7 +77,7 @@ export default class Character {
     }else if(Items.type ==="boots") {
       this.speed += 5;
     }else {
-      this.defense += 5
+      this.defense += 5;
     }
   }
 }

@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-    entry: 'index.js',
+    entry: '../src/index.js',
     output: {
       filename: 'bundle.js',
       path: path.resolve(__dirname, 'dist')
@@ -17,7 +17,7 @@ module.exports = {
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         title: 'role-playing', //fill in title
-        template: 'index.html', //fill in where you want it to end up
+        template: './src/index.html', //fill in where you want it to end up
         inject: 'body'
       })
     ],

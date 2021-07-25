@@ -86,4 +86,11 @@ describe('Character Item', () => {
     character.inventory.push(item.type);
     expect(character.inventory).toEqual(["healthpot"]);
   });
+
+  test('should correctly apply item to inventory', () => {
+    character.wizard();
+    item.sword();
+    character.inventory.push(item.type);
+    expect(character.inventory).toEqual(["sword"]);
+  });
 });
