@@ -81,14 +81,14 @@ describe('Character Item', () => {
   });
   
   test('should correctly apply healthpot to inventory', () => {
-    character.wizard();
+    character.knight();
     item.healthPot();
     character.inventory.push(item.type);
     expect(character.inventory).toEqual(["healthpot"]);
   });
 
   test('should correctly apply sword to inventory', () => {
-    character.wizard();
+    character.barbarian();
     item.sword();
     character.inventory.push(item.type);
     expect(character.inventory).toEqual(["sword"]);
@@ -100,5 +100,12 @@ describe('Character Item', () => {
     item.wand();
     character.inventory.push(item.type);
     expect(character.inventory).toEqual(["wand"]);
+  });
+  
+  test('should correctly apply spellbook to inventory', () => {
+    character.alchemist();
+    item.spellBook();
+    character.inventory.push(item.type);
+    expect(character.inventory).toEqual(["spellbook"]);
   });
 });
