@@ -1,3 +1,5 @@
+import Items from "./items.js";
+
 export default class Character {
   constructor() {
     this.strength = 0,
@@ -6,7 +8,8 @@ export default class Character {
     this.magic = 0,
     this.defense = 0,
     this.hp = 100,
-    this.mp = 100,
+    this.mp = 0,
+    this.inventory = []
     this.type = "",
     this.level = 1
   }
@@ -57,5 +60,26 @@ export default class Character {
     this.speed = 15;
     this.magic = 0;
     this.defense = 50;
+  }
+  addToInventory = (item) => {
+    this.inventory.push(item);
+    
+  }
+  applyItems = () => {
+    itemArray = ["healthpot", "sword", "wand", "spellbook", "boots", "shield"]
+    this.inventory.push("healthpot")
+    if(itemArray.includes(lootBag("healthpot"))) {
+      this.hp += 5;
+    }else if(itemArray.includes(lootBag("sword"))) {
+      this.strength += 5;
+    }else if(itemArray.includes(lootBag("wand"))) {
+      this.magic += 5;
+    }else if(itemArray.includes(lootBag("spellbook")))  {
+      this.intelligence += 5;
+    }else if(itemArray.includes(lootBag("boots"))) {
+      this.speed += 5;
+    }else {
+      this.defense += 5
+    }
   }
 }

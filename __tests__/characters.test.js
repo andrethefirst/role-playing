@@ -67,4 +67,10 @@ describe('Character', () => {
     expect(character.magic).toEqual(0);
     expect(character.defense).toEqual(50);
   });
+
+//      test('should correctly apply item to inventory and apply stat modifier')
+//      character.wizard()
+//      character.addToInventory(myBag[0])
+//      expect(character.inventory).toEqual([{'name': 'healthpot'}])
 });
+
