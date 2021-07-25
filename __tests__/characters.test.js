@@ -115,4 +115,11 @@ describe('Character Item', () => {
     character.inventory.push(item.type);
     expect(character.inventory).toEqual(["boots"]);
   });
+
+  test('should correctly apply shield to inventory', () => {
+    character.orc();
+    item.shield();
+    character.inventory.push(item.type);
+    expect(character.inventory).toEqual(["shield"]);
+  });
 });
