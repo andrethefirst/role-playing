@@ -108,4 +108,11 @@ describe('Character Item', () => {
     character.inventory.push(item.type);
     expect(character.inventory).toEqual(["spellbook"]);
   });
+
+  test('should correctly apply boots to inventory', () => {
+    character.elf();
+    item.boots();
+    character.inventory.push(item.type);
+    expect(character.inventory).toEqual(["boots"]);
+  });
 });
