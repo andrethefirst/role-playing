@@ -80,17 +80,25 @@ describe('Character Item', () => {
     item = new Items();
   });
   
-  test('should correctly apply item to inventory', () => {
+  test('should correctly apply healthpot to inventory', () => {
     character.wizard();
     item.healthPot();
     character.inventory.push(item.type);
     expect(character.inventory).toEqual(["healthpot"]);
   });
 
-  test('should correctly apply item to inventory', () => {
+  test('should correctly apply sword to inventory', () => {
     character.wizard();
     item.sword();
     character.inventory.push(item.type);
     expect(character.inventory).toEqual(["sword"]);
+  });
+
+
+  test('should correctly apply wand to inventory', () => {
+    character.wizard();
+    item.wand();
+    character.inventory.push(item.type);
+    expect(character.inventory).toEqual(["wand"]);
   });
 });
