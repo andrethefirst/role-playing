@@ -36,4 +36,11 @@ describe('items', () => {
     expect(item.effect).toEqual("boots adds 5 speed");
     expect(item.speed).toEqual(5);
   });
+
+  test('should correctly pull up stats for spellbook', () => {
+    item.spellBook()
+    expect(item.type).toEqual("spellbook");
+    expect(item.effect).toEqual("spellbook adds 5 intelligence");
+    expect(item.intelligence).toEqual(5);
+  });
 });
