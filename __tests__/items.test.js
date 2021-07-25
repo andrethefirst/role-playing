@@ -43,4 +43,11 @@ describe('items', () => {
     expect(item.effect).toEqual("spellbook adds 5 intelligence");
     expect(item.intelligence).toEqual(5);
   });
+
+  test('should correctly pull up stats for shield', () => {
+    item.shield()
+    expect(item.type).toEqual("shield");
+    expect(item.effect).toEqual("shield adds 5 defense");
+    expect(item.defense).toEqual(5);
+  });
 });

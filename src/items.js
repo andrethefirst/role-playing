@@ -11,7 +11,7 @@ export default class Items {
   sword = () => {
     this.type = "sword";
     this.effect = "sword adds 5 strength";
-    this.strength = 5
+    this.strength = 5;
   }
   wand = () => {
     this.type = "wand";
@@ -27,5 +27,10 @@ export default class Items {
     this.type = "boots";
     this.effect = "boots adds 5 speed";
     this.speed = 5;
+  }
+  shield = () => {
+    this.type = "shield";
+    this.effect = "shield adds 5 defense";
+    this.defense = 5;
   }
 }
