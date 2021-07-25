@@ -23,4 +23,10 @@ describe('items', () => {
     expect(item.strength).toEqual(5);
   });
 
-})
+  test('should correctly pull up stats for wand', () => {
+    item.wand()
+    expect(item.type).toEqual("wand");
+    expect(item.effect).toEqual("wand adds 5 magic");
+    expect(item.magic).toEqual(5);
+  });
+});
