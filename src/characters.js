@@ -12,50 +12,50 @@ export default class Character {
   }
   wizard = () => {
     this.type = "wizard";
-    this.strength = 35;
-    this.intelligence = 75;
-    this.speed = 30;
-    this.magic = 90;
-    this.defense = 20;
+    this.strength = 10;
+    this.intelligence = 35;
+    this.speed = 15;
+    this.magic = 50;
+    this.defense = 5;
     }
   knight = () => {
     this.type = "knight";
-    this.strength = 75;
-    this.intelligence = 30;
-    this.speed = 50;
-    this.magic = 10;
-    this.defense = 65;
+    this.strength = 20;
+    this.intelligence = 20;
+    this.speed = 20;
+    this.magic = 20;
+    this.defense = 20;
   }
   elf = () => {
     this.type = "elf";
-    this.strength = 25;
-    this.intelligence = 65;
-    this.speed = 90;
-    this.magic = 65;
-    this.defense = 5;
+    this.strength = 5;
+    this.intelligence = 30;
+    this.speed = 50;
+    this.magic = 15;
+    this.defense = 10;
   }
   barbarian = () => {
     this.type = "barbarian";
-    this.strength = 90;
+    this.strength = 50;
     this.intelligence = 15;
-    this.speed = 20;
+    this.speed = 10;
     this.magic = 0;
-    this.defense = 65;
+    this.defense = 40;
   }
   alchemist = () => {
     this.type = "alchemist";
-    this.strength = 10;
-    this.intelligence = 90;
-    this.speed = 40;
-    this.magic = 70;
-    this.defense = 20;
+    this.strength = 5;
+    this.intelligence = 50;
+    this.speed = 15;
+    this.magic = 35;
+    this.defense = 10;
   }
   orc = () => {
     this.type = "orc";
-    this.strength = 65;
-    this.intelligence = 10;
-    this.speed = 30;
+    this.strength = 40;
+    this.intelligence = 5;
+    this.speed = 15;
     this.magic = 0;
-    this.defense = 90;
+    this.defense = 50;
   }
 }
