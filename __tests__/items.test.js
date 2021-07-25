@@ -16,5 +16,11 @@ describe('items', () => {
  
   });
 
+  test('should correctly pull up stats for sword', () => { 
+    item.sword()
+    expect(item.type).toEqual("sword");
+    expect(item.effect).toEqual("sword adds 5 strength");
+    expect(item.strength).toEqual(5);
+  });
 
 })
