@@ -1,4 +1,5 @@
 import Character from "../src/characters";
+import Items from "../src/items";
 
 describe('Character', () => {
   
@@ -67,10 +68,22 @@ describe('Character', () => {
     expect(character.magic).toEqual(0);
     expect(character.defense).toEqual(50);
   });
-
-//      test('should correctly apply item to inventory and apply stat modifier')
-//      character.wizard()
-//      character.addToInventory(myBag[0])
-//      expect(character.inventory).toEqual([{'name': 'healthpot'}])
 });
 
+describe('Character Item', () => {
+
+  let character;
+  let item;
+
+  beforeEach(() => {
+    character = new Character();
+    item = new Items();
+  });
+  
+  test('should correctly apply item to inventory', () => {
+    character.wizard();
+    item.healthPot();
+    character.inventory.push(item.type);
+    expect(character.inventory).toEqual(["healthpot"]);
+  });
+});

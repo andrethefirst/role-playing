@@ -1,7 +1,13 @@
 export default class Items {
   constructor() {
-    this.type = ""
+    this.type = "",
     this.effect = ""
+    this.strength = 0,
+    this.intelligence = 0,
+    this.speed = 0,
+    this.magic = 0,
+    this.defense = 0,
+    this.hp = 0
   }
   healthPot = () => {
     this.type = "healthpot";
