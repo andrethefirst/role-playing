@@ -37,4 +37,14 @@ describe('Character', () => {
     expect(character.magic).toEqual(65);
     expect(character.defense).toEqual(5);
   });
+
+  test('should correctly fill in the character type and stats to match for barbarian', () => { 
+    character.barbarian()
+    expect(character.type).toEqual("barbarian");
+    expect(character.strength).toEqual(90);
+    expect(character.intelligence).toEqual(15);
+    expect(character.speed).toEqual(20);
+    expect(character.magic).toEqual(0);
+    expect(character.defense).toEqual(65);
+  });
 });
