@@ -47,4 +47,14 @@ describe('Character', () => {
     expect(character.magic).toEqual(0);
     expect(character.defense).toEqual(65);
   });
+
+  test('should correctly fill in the character type and stats to match for scientist', () => { 
+    character.scientist()
+    expect(character.type).toEqual("scientist");
+    expect(character.strength).toEqual(10);
+    expect(character.intelligence).toEqual(90);
+    expect(character.speed).toEqual(40);
+    expect(character.magic).toEqual(70);
+    expect(character.defense).toEqual(20);
+  });
 });
