@@ -17,6 +17,7 @@ describe('Character', () => {
     expect(character.magic).toEqual(90);
     expect(character.defense).toEqual(20);
   });
+
   test('should correctly fill in the character type and stats to match for knight', () => { 
     character.knight()
     expect(character.type).toEqual("knight");
@@ -25,5 +26,15 @@ describe('Character', () => {
     expect(character.speed).toEqual(50);
     expect(character.magic).toEqual(10);
     expect(character.defense).toEqual(65);
+  });
+
+  test('should correctly fill in the character type and stats to match for elf', () => { 
+    character.elf()
+    expect(character.type).toEqual("elf");
+    expect(character.strength).toEqual(25);
+    expect(character.intelligence).toEqual(65);
+    expect(character.speed).toEqual(90);
+    expect(character.magic).toEqual(65);
+    expect(character.defense).toEqual(5);
   });
 });

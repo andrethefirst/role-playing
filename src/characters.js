@@ -27,7 +27,7 @@ export default class Character {
     this.defense = 65;
   }
   elf = () => {
-    this.type === "elf";
+    this.type = "elf";
     this.strength = 25;
     this.intelligence = 65;
     this.speed = 90;
