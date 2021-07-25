@@ -42,8 +42,8 @@ export default class Character {
     this.magic = 0;
     this.defense = 65;
   }
-  scientist = () => {
-    this.type = "scientist";
+  alchemist = () => {
+    this.type = "alchemist";
     this.strength = 10;
     this.intelligence = 90;
     this.speed = 40;

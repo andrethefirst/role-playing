@@ -48,9 +48,9 @@ describe('Character', () => {
     expect(character.defense).toEqual(65);
   });
 
-  test('should correctly fill in the character type and stats to match for scientist', () => { 
-    character.scientist()
-    expect(character.type).toEqual("scientist");
+  test('should correctly fill in the character type and stats to match for alchemist', () => { 
+    character.alchemist()
+    expect(character.type).toEqual("alchemist");
     expect(character.strength).toEqual(10);
     expect(character.intelligence).toEqual(90);
     expect(character.speed).toEqual(40);
