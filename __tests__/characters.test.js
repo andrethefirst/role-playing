@@ -160,4 +160,11 @@ describe('applyItem', () => {
     character.applyItems();
     expect(character.strength).toEqual(55);
   });
+  test("should correctly apply item state modifier too alchemist intelligence stat.", () => {
+    character.alchemist();
+    item.spellBook();
+    character.inventory.push(item.type);
+    character.applyItems();
+    expect(character.intelligence).toEqual(55);
+  });
 });
