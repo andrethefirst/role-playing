@@ -153,4 +153,11 @@ describe('applyItem', () => {
     character.applyItems();
     expect(character.speed).toEqual(55);
   });
+  test("should correctly apply item state modifier too barbarian strength stat.", () => {
+    character.barbarian();
+    item.sword();
+    character.inventory.push(item.type);
+    character.applyItems();
+    expect(character.strength).toEqual(55);
+  });
 });
