@@ -132,11 +132,18 @@ describe('applyItem', () => {
     character = new Character();
     item = new Items();
   });
-  test("should correctly apply item state modifier too character stat.", () => {
+  test("should correctly apply item state modifier too wizard magic stat.", () => {
     character.wizard();
     item.wand();
     character.inventory.push(item.type);
     character.applyItems();
     expect(character.magic).toEqual(55);
+  });
+  test("should correctly apply item state modifier too knight hp stat.", () => {
+    character.knight();
+    item.healthPot();
+    character.inventory.push(item.type);
+    character.applyItems();
+    expect(character.hp).toEqual(105);
   });
 });
