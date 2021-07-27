@@ -123,3 +123,20 @@ describe('Character Item', () => {
     expect(character.inventory).toEqual(["shield"]);
   });
 });
+
+describe('applyItem', () => {
+  let character;
+  let item;
+
+  beforeEach(() => {
+    character = new Character();
+    item = new Items();
+  });
+  test("should correctly apply item state modifier too character stat.", () => {
+    character.wizard();
+    item.wand();
+    character.inventory.push(item.type);
+    character.applyItems();
+    expect(character.magic).toEqual(55);
+  });
+});

@@ -66,17 +66,17 @@ export default class Character {
     
   }
   applyItems = () => {
-    if(Items.type === "healthpot") {
+    if(this.inventory.includes("healthpot")) {
       this.hp += 5;
-    }else if(Items.type === "sword") {
+    }else if(this.inventory.includes("sword")) {
       this.strength += 5;
-    }else if(Items.type === "wand") {
+    }else if(this.inventory.includes("wand")) {
       this.magic += 5;
-    }else if(Items.type === "spellbook")  {
+    }else if(this.inventory.includes("spellbook")) {
       this.intelligence += 5;
-    }else if(Items.type ==="boots") {
+    }else if(this.inventory.includes("boots")) {
       this.speed += 5;
-    }else {
+    }else if(this.inventory.includes("shield")) {
       this.defense += 5;
     }
   }
