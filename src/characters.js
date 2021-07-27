@@ -1,4 +1,5 @@
 import Items from "./items.js";
+import Enemy from "./enemies.js";
 
 export default class Character {
   constructor() {
