@@ -167,4 +167,11 @@ describe('applyItem', () => {
     character.applyItems();
     expect(character.intelligence).toEqual(55);
   });
+  test("should correctly apply item state modifier too orc defense stat.", () => {
+    character.orc();
+    item.shield();
+    character.inventory.push(item.type);
+    character.applyItems();
+    expect(character.defense).toEqual(55);
+  });
 });
