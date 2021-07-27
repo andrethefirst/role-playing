@@ -146,4 +146,11 @@ describe('applyItem', () => {
     character.applyItems();
     expect(character.hp).toEqual(105);
   });
+  test("should correctly apply item state modifier too elf speed stat.", () => {
+    character.elf();
+    item.boots();
+    character.inventory.push(item.type);
+    character.applyItems();
+    expect(character.speed).toEqual(55);
+  });
 });
